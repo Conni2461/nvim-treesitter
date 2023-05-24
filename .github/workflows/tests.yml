@@ -1,12 +1,6 @@
 name: Tests
 
-on:
-  push:
-    branches:
-      - "master"
-  pull_request:
-    branches:
-      - "master"
+on: [push, pull_request]
 
 # Cancel any in-progress CI runs for a PR if it is updated
 concurrency:
@@ -37,6 +31,7 @@ jobs:
           mkdir -p ~/.local/share/nvim/site/pack/plenary.nvim/start
           cd ~/.local/share/nvim/site/pack/plenary.nvim/start
           git clone https://github.com/nvim-lua/plenary.nvim
+          git -C plenary.nvim checkout 60200d212a012bad6d0d75b10694eebc31f60c4f
           curl -L https://github.com/theHamsta/highlight-assertions/releases/download/v0.1.6/highlight-assertions_v0.1.6_x86_64-unknown-linux-gnu.tar.gz | tar -xz
           cp highlight-assertions /usr/local/bin
 
