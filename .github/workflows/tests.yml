@@ -31,7 +31,7 @@ jobs:
           mkdir -p ~/.local/share/nvim/site/pack/plenary.nvim/start
           cd ~/.local/share/nvim/site/pack/plenary.nvim/start
           git clone https://github.com/nvim-lua/plenary.nvim
-          git -C plenary.nvim checkout e6b5169ce39816423f213875e44302224a8b9580
+          git -C plenary.nvim checkout 4756fb87eaa4272a0778b74392f709a4a90fcdfb
           curl -L https://github.com/theHamsta/highlight-assertions/releases/download/v0.1.6/highlight-assertions_v0.1.6_x86_64-unknown-linux-gnu.tar.gz | tar -xz
           cp highlight-assertions /usr/local/bin
 
